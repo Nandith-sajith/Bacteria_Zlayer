@@ -1,0 +1,48 @@
+<!-- Nandith Sajith 0870240-->
+<!-- Akhil Jaison 0870628-->
+
+<html>
+<head>
+<title>Bacteria Slayer</title>
+
+<style>
+.score-board {
+position: absolute;
+left: 1010px;
+top: -20px;
+}
+#text {
+position: absolute;
+pointer-events: none;
+left: 0px;
+top: 0px;
+z-index: 2;
+}
+#light {
+color: green;
+}
+</style>
+
+<script type="text/javascript" src="BacteriaSlayer.js"></script>
+<script type="text/javascript" src="sphere.js"></script>
+<script type="text/javascript" src="shaders.js"></script>
+<script type="text/javascript" src="utils/gl-matrix-min.js"></script>
+<script type="text/javascript" src="utils/gl_tools.js"></script>
+<script type="text/javascript" src="utils/geometry_tools.js"></script>
+</head>
+<body onload="main();">
+<canvas id="game-surface" height="800" width="1000">
+ Your browser does not seem to support canvas.
+</canvas>
+<canvas id="text" height="800" width="1000"></canvas>
+<div class="score-board">
+<h1> Score: <span id="scoreDisplay"></span></h1>
+<h3> Bacterias to be slayed: <span id="bactLeft"></span></h3>
+<h3> Lives left: <span id="spawn"></span></h3>
+<p>Click on the bacteria to destroy them.</p>
+<p>You will loose lives each time a bacteria becomes stronger by growing too big.</p>
+<p>Click and drag to rotate the sphere.</p>
+<p>Light: <button id="light">On</button></p>
+</div>
+</body>
+</html>
